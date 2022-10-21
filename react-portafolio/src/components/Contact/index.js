@@ -48,23 +48,13 @@ const Contact = () => {
               <form ref={form} onSubmit={sendEmail}>
                 <ul>
                   <li className="half">
-                    <input placeholder="Name" type="text" name="name" required />
+                    <input placeholder="Name" type="text"  name="from_name" id="from_name" required />
                   </li>
                   <li className="half">
-                    <input
-                      placeholder="Email"
-                      type="email"
-                      name="email"
-                      required
-                    />
+                    <input placeholder="Email" type="email" name="email_id" id="email_id" required />
                   </li>
                   <li>
-                    <input
-                      placeholder="Subject"
-                      type="text"
-                      name="subject"
-                      required
-                    />
+                    <input placeholder="Subject" type="text" name="subject" required />
                   </li>
                   <li>
                     <textarea

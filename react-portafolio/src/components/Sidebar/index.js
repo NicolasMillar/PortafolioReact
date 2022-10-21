@@ -3,7 +3,7 @@ import './index.scss'
 import LogoS from '../../assets/images/Nuevo-Logo2.png'
 import LogoSubtitle from '../../assets/images/Nuevo-LogoSub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faEnvelope, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () =>(
@@ -21,6 +21,9 @@ const Sidebar = () =>(
             </NavLink>
             <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
                 <FontAwesomeIcon   icon={faEnvelope} color="#4d4d4e" />
+            </NavLink>
+            <NavLink exact="true" activeclassname="active" className="portfolio-link" to="/portafolio">
+                <FontAwesomeIcon   icon={faBriefcase} color="#4d4d4e" />
             </NavLink>
         </nav>
         <ul>
