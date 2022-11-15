@@ -2,11 +2,24 @@ import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import pudu from '../../assets/images/pudu.png';
 
 const imagenes = [
-    "https://picsum.photos/id/1020/200/400",
+    pudu,
     "https://picsum.photos/id/1025/200/400",
     "https://picsum.photos/id/1029/200/400",
+];
+
+const titulos = [
+    "Pudu",
+    "Titulo 2",
+    "Titulo 3",
+];
+
+const Descripcion = [
+    "An app that tells nutrition value and environment impact of foods, \nhelping you reach your fitness goals while taking care of the planet.",
+    "Descripcion 2",
+    "Descripcion 3",
 ];
 
 
@@ -33,8 +46,15 @@ const Portafolio = () => {
                             return (
                                 <div>
                                     { iamgenActual === index && (
+                                       <h1>{titulos[index]}</h1>
+                                    )}
+                                    { iamgenActual === index && (
                                         <img key={index} src={imagen} alt="imagen"/>
                                     )}
+                                    { iamgenActual === index && (
+                                       <p className="parrafo" >{Descripcion[index]} </p>
+                                    )}
+                                    
                                 </div>
                             );
                         })}
