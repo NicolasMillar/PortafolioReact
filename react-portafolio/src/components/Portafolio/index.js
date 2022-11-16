@@ -17,7 +17,7 @@ const titulos = [
 ];
 
 const Descripcion = [
-    "An app that tells nutrition value and environment impact of foods, \nhelping you reach your fitness goals while taking care of the planet.",
+    "Pudu is MVP of an App that tells nutrition value and environment impact of foods, \nhelping you reach your fitness goals while taking care of the planet. This App was \ndeveloped for a IBM Call For Code 2022 in team whit two Software Engineer.",
     "Descripcion 2",
     "Descripcion 3",
 ];
@@ -41,16 +41,18 @@ const Portafolio = () => {
             <div className='container portafolio-page'>
                 <div className='text-zone'>
                     <div className='image'>
-                        <button onClick={previus}><FontAwesomeIcon  icon={faArrowLeft} color="#4d4d4e" /></button>
+                        <button onClick={previus}><FontAwesomeIcon  icon={faArrowLeft} color="#4d4d4e" size='3x' /></button>
                         {imagenes.map((imagen,index) => {
                             return (
                                 <div>
                                     { iamgenActual === index && (
                                        <h1>{titulos[index]}</h1>
                                     )}
-                                    { iamgenActual === index && (
-                                        <img key={index} src={imagen} alt="imagen"/>
-                                    )}
+                                    <div >
+                                        { iamgenActual === index && (
+                                            <img key={index} src={imagen} alt="imagen"/>
+                                        )} 
+                                    </div>
                                     { iamgenActual === index && (
                                        <p className="parrafo" >{Descripcion[index]} </p>
                                     )}
@@ -58,7 +60,7 @@ const Portafolio = () => {
                                 </div>
                             );
                         })}
-                        <button onClick={next}><FontAwesomeIcon  icon={faArrowRight} color="#4d4d4e" /></button> 
+                        <button onClick={next}><FontAwesomeIcon  icon={faArrowRight} color="#4d4d4e"  size='3x' /></button> 
                     </div>
                 </div>
             </div>
